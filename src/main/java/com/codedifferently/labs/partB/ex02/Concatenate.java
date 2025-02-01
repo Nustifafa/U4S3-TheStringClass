@@ -4,7 +4,10 @@ public class Concatenate {
     public static String concatenateStrings() {
             String response = "";
         /* Your code goes here*/
-
+            String firstName = "Abe";
+            String lastName = "Lincoln";
+            firstName = firstName + " " + lastName;
+            response += firstName;
         return response;
     }
 

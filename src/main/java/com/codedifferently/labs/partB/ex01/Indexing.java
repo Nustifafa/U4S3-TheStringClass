@@ -6,6 +6,14 @@ public class Indexing {
         String myStr = "Hello planet earth, you are a great planet.";
         /* Your code goes here*/
 
+        // Find the first occurrence of 'e'
+        int firstIndex = myStr.indexOf('e');
+        response += "First 'e' found at index: " + firstIndex + "\n";
+
+        // Find the next occurrence of 'e' starting just after the first 'e'
+        int nextIndex = myStr.indexOf('e', firstIndex + 1);
+        response += "Next 'e' found at index: " + nextIndex;
+
         return response;
     }
 

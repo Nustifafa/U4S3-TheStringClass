@@ -12,14 +12,28 @@ public class NameMaker {
     }
 
     public static void main(String[] args) {
+
         String firstName = "";
         String middleName = "";
         String lastName = "";
+
         /* Put your code in between these comments : Top */
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for their first name, middle name, and last name
+        System.out.print("Enter your first name: ");
+        firstName = scanner.nextLine();
+
+        System.out.print("Enter your middle name: ");
+        middleName = scanner.nextLine();
+
+        System.out.print("Enter your last name: ");
+        lastName = scanner.nextLine();
 
 
         /* Put your code in between these comments : Bottom */
         String fullName  = nameMaker(firstName, middleName, lastName);
         System.out.println(fullName);
+        scanner.close(); //close the scanner
     }
 }
