@@ -12,9 +12,11 @@ public class AlgoChallenge {
     missingLetter("kitten", 4) --> "kittn"
      */
 
+
     public static String missingLetter(String letter, int n) {
 
-        return null;
+        return letter.substring(0, n) + letter.substring(n + 1);
+
     }
 
     /* Problem 2
@@ -29,8 +31,22 @@ public class AlgoChallenge {
 
     public static String wordOfDay(String word) {
 
-        return null;
+        // Get the last letter of the word
+        char lastChar = word.charAt(word.length() - 1);
+        // Add the last letter to the front and back of the word
+        return lastChar + word + lastChar;
     }
+    public static void main(String[] args) {
+        // Testing the missingLetter method
+        System.out.println("missingLetter('kitten', 1): " + missingLetter("kitten", 1)); // Expected "ktten"
+        System.out.println("missingLetter('kitten', 0): " + missingLetter("kitten", 0)); // Expected "itten"
+        System.out.println("missingLetter('kitten', 4): " + missingLetter("kitten", 4)); // Expected "kittn"
 
+        // Testing the wordOfDay method
+        System.out.println("wordOfDay('cat'): " + wordOfDay("cat")); //expected "tcatt"
+        System.out.println("wordOfDay('Hello'): " + wordOfDay("Hello")); // Expected "oHelloo"
+        System.out.println("wordOfDay('a'): " + wordOfDay("a")); // Expected "aaa"
+    }
 }
+
 
